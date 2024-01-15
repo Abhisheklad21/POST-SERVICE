@@ -1,0 +1,31 @@
+# Database Configuration
+spring:
+  application:
+    name: POST-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/postdb_mcs
+    username: root
+    password: 1234
+
+  # Hibernate Configuration
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#      properties:
+#        hibernate:
+#          dialect: org.hibernate.dialect.MySQLDialect
+
+# Server Configuration
+server:
+  port: 8081
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
